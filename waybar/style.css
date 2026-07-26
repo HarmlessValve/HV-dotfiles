@@ -1,0 +1,119 @@
+/* ────────────────────────────────────────────────────────────
+ * Blackturq Waybar Theme
+ * Adapted from Omarchy dots-files layout
+ * ────────────────────────────────────────────────────────────
+ */
+
+/* Blackturq color definitions */
+@define-color background #0a0a0a;
+@define-color foreground #8FECD5;
+@define-color accent #ADF0E9;
+@define-color muted #485362;
+@define-color red #D35F5F;
+@define-color border_bg #272b30;
+
+* {
+  background-color: @background;
+  color: @foreground;
+
+  border: none;
+  border-radius: 10px;
+  min-height: 0;
+  font-family: 'JetBrainsMono Nerd Font';
+  font-size: 9px;
+}
+
+.modules-left {
+  margin-left: 8px;
+}
+
+.modules-right {
+  margin-right: 8px;
+}
+
+#workspaces button {
+  all: initial;
+  padding: 0 6px;
+  margin: 0 1.5px;
+  min-width: 9px;
+}
+
+#workspaces button.active {
+  opacity: 0.8;
+  color: @accent;
+}
+
+#battery,
+#pulseaudio,
+#network,
+#bluetooth {
+  min-width: 12px;
+  margin: 0 7.5px;
+}
+
+#tray {
+  margin-right: 16px;
+}
+
+#bluetooth {
+  margin-right: 0px;
+}
+
+#network {
+  margin-right: 5px;
+}
+
+tooltip {
+  padding: 2px;
+  background-color: @background;
+  border: 1px solid @border_bg;
+}
+
+#clock {
+  margin-left: 5px;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+/* Media player styling */
+#mpris {
+  color: @muted;
+  margin-left: 5px;
+}
+
+/* Battery warning/critical states */
+#battery.warning {
+  color: #A9D1D7;
+}
+
+#battery.critical {
+  color: @red;
+}
+
+/* Power profile styling */
+#custom-power-profile {
+  min-width: 12px;
+  margin: 0 5px;
+}
+
+#custom-power-profile.power-saver {
+  color: #8FECD5;
+}
+
+#custom-power-profile.balanced {
+  color: @foreground;
+}
+
+#custom-power-profile.performance {
+  color: #D35F5F;
+}
+/* ────────────────────────────────────────────────────────────
+ * Omarchy Custom Theme for Waybar
+ * Generated with Omarchist
+ * ────────────────────────────────────────────────────────────
+ */
+
+@define-color background #0a0a0a;
+@define-color foreground #8FECD5;

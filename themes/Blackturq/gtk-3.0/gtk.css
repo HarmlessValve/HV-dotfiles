@@ -1,0 +1,439 @@
+/* ──────────────────────────────────────────────────────────────────
+   Blackturq GTK3 Theme
+   Deep black + vibrant turquoise — matches colors.toml palette
+   ────────────────────────────────────────────────────────────────── */
+
+/* ── Color Variables ── */
+@define-color bg           #0a0a0a;
+@define-color bg_alt       #111111;
+@define-color bg_surface   #151515;
+@define-color bg_raised    #1a1a1a;
+@define-color bg_dark      #050505;
+
+@define-color fg           #c8dcdc;
+@define-color fg_dim       #7a9a9a;
+@define-color fg_disabled  #4a6060;
+
+@define-color accent       #ADF0E9;
+@define-color accent_dark  #75dddd;
+@define-color accent_hover #8FECD5;
+
+@define-color sel_bg       #ADF0E9;
+@define-color sel_fg       #0a0a0a;
+
+@define-color border       #222222;
+@define-color border_focus #ADF0E9;
+
+@define-color red          #D35F5F;
+@define-color green        #8FECD5;
+@define-color yellow       #A9D1D7;
+@define-color muted        #485362;
+@define-color muted2       #5a676b;
+@define-color subtle       #322F3B;
+
+/* ── Reset & Base ── */
+* {
+    -GtkScrollbar-has-backward-stepper: false;
+    -GtkScrollbar-has-forward-stepper:  false;
+    outline-color: @accent;
+    outline-width: 1px;
+    outline-offset: -1px;
+}
+
+window, .background {
+    background-color: @bg;
+    color: @fg;
+}
+
+/* ── Header / Titlebar ── */
+headerbar,
+.titlebar,
+headerbar.default-decoration {
+    background-color: @bg;
+    color: @fg;
+    border-bottom: 1px solid @border;
+    box-shadow: none;
+    padding: 4px 8px;
+}
+
+headerbar button,
+.titlebar button {
+    background-color: transparent;
+    color: @fg_dim;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    padding: 4px 8px;
+    transition: all 150ms ease;
+}
+
+headerbar button:hover,
+.titlebar button:hover {
+    background-color: @bg_raised;
+    color: @fg;
+    border-color: @border;
+}
+
+headerbar button:active,
+.titlebar button:active {
+    background-color: @accent;
+    color: @sel_fg;
+}
+
+/* ── Buttons ── */
+button {
+    background-color: @bg_raised;
+    color: @fg;
+    border: 1px solid @border;
+    border-radius: 4px;
+    padding: 5px 12px;
+    transition: all 150ms ease;
+    box-shadow: none;
+}
+
+button:hover {
+    background-color: @bg_surface;
+    border-color: @accent_dark;
+    color: @fg;
+}
+
+button:active,
+button:checked {
+    background-color: @accent;
+    color: @sel_fg;
+    border-color: @accent;
+}
+
+button:disabled {
+    background-color: @bg_alt;
+    color: @fg_disabled;
+    border-color: @border;
+}
+
+button.suggested-action {
+    background-color: @accent;
+    color: @sel_fg;
+    border-color: @accent;
+}
+
+button.suggested-action:hover {
+    background-color: @accent_hover;
+    border-color: @accent_hover;
+}
+
+button.destructive-action {
+    background-color: @red;
+    color: @bg;
+    border-color: @red;
+}
+
+/* ── Text / Entry ── */
+entry,
+spinbutton,
+.entry {
+    background-color: @bg_alt;
+    color: @fg;
+    border: 1px solid @border;
+    border-radius: 4px;
+    padding: 5px 8px;
+    caret-color: @accent;
+    box-shadow: none;
+}
+
+entry:focus,
+spinbutton:focus {
+    border-color: @accent;
+    box-shadow: 0 0 0 1px alpha(@accent, 0.3);
+}
+
+entry selection,
+spinbutton selection {
+    background-color: @sel_bg;
+    color: @sel_fg;
+}
+
+/* ── Lists & Rows ── */
+listview,
+treeview,
+.view {
+    background-color: @bg;
+    color: @fg;
+    border: none;
+}
+
+listview row,
+treeview row {
+    padding: 2px 4px;
+    border-radius: 3px;
+}
+
+listview row:hover,
+treeview row:hover {
+    background-color: @bg_raised;
+}
+
+listview row:selected,
+treeview row:selected,
+row:selected {
+    background-color: @sel_bg;
+    color: @sel_fg;
+}
+
+listview row:selected:hover,
+treeview row:selected:hover {
+    background-color: @accent_hover;
+}
+
+/* ── Sidebar / Places ── */
+.sidebar,
+placessidebar,
+.placessidebar {
+    background-color: @bg_alt;
+    color: @fg;
+    border-right: 1px solid @border;
+}
+
+.sidebar row,
+placessidebar row {
+    padding: 4px 8px;
+    border-radius: 4px;
+    color: @fg_dim;
+}
+
+.sidebar row:hover,
+placessidebar row:hover {
+    background-color: @bg_surface;
+    color: @fg;
+}
+
+.sidebar row:selected,
+placessidebar row:selected {
+    background-color: alpha(@accent, 0.15);
+    color: @accent;
+}
+
+/* ── Popover / Menu ── */
+popover,
+.popover {
+    background-color: @bg_raised;
+    color: @fg;
+    border: 1px solid @border;
+    border-radius: 6px;
+    box-shadow: 0 4px 16px alpha(#000, 0.6);
+    padding: 4px;
+}
+
+menu,
+menubar,
+.menu {
+    background-color: @bg_raised;
+    color: @fg;
+    border: 1px solid @border;
+    padding: 2px;
+}
+
+menuitem {
+    padding: 5px 10px;
+    border-radius: 3px;
+    color: @fg;
+}
+
+menuitem:hover,
+menuitem:selected {
+    background-color: alpha(@accent, 0.15);
+    color: @accent;
+}
+
+menuitem:disabled {
+    color: @fg_disabled;
+}
+
+/* ── Scrollbar ── */
+scrollbar {
+    background-color: @bg;
+    border: none;
+}
+
+scrollbar slider {
+    background-color: @muted;
+    border-radius: 4px;
+    min-width: 6px;
+    min-height: 6px;
+    margin: 2px;
+    transition: background-color 150ms ease;
+}
+
+scrollbar slider:hover {
+    background-color: @muted2;
+}
+
+scrollbar slider:active {
+    background-color: @accent_dark;
+}
+
+/* ── Notebook / Tabs ── */
+notebook > header {
+    background-color: @bg_alt;
+    border-bottom: 1px solid @border;
+}
+
+notebook > header tab {
+    background-color: transparent;
+    color: @fg_dim;
+    padding: 6px 14px;
+    border-bottom: 2px solid transparent;
+}
+
+notebook > header tab:checked {
+    color: @accent;
+    border-bottom-color: @accent;
+}
+
+notebook > header tab:hover {
+    color: @fg;
+    background-color: @bg_surface;
+}
+
+/* ── Separator ── */
+separator {
+    background-color: @border;
+    min-width: 1px;
+    min-height: 1px;
+}
+
+/* ── Progress / Scale ── */
+progressbar trough,
+scale trough {
+    background-color: @bg_raised;
+    border-radius: 4px;
+    min-height: 4px;
+}
+
+progressbar progress,
+scale highlight {
+    background-color: @accent;
+    border-radius: 4px;
+}
+
+scale slider {
+    background-color: @accent;
+    border-radius: 50%;
+    min-width: 14px;
+    min-height: 14px;
+    box-shadow: none;
+}
+
+/* ── Check & Radio ── */
+checkbutton check,
+radiobutton radio {
+    background-color: @bg_raised;
+    border: 1px solid @border;
+    color: @fg;
+}
+
+checkbutton check:checked,
+radiobutton radio:checked {
+    background-color: @accent;
+    border-color: @accent;
+    color: @sel_fg;
+}
+
+checkbutton check:hover,
+radiobutton radio:hover {
+    border-color: @accent_dark;
+}
+
+/* ── File Chooser Dialog (key for IDE open folder) ── */
+filechooser {
+    background-color: @bg;
+    color: @fg;
+}
+
+filechooser .dialog-action-box {
+    background-color: @bg_alt;
+    border-top: 1px solid @border;
+    padding: 8px;
+}
+
+filechooser #pathbarbox,
+filechooser .path-bar {
+    background-color: @bg_alt;
+    border-bottom: 1px solid @border;
+    padding: 4px;
+}
+
+filechooser .path-bar button {
+    background-color: transparent;
+    border: none;
+    color: @fg_dim;
+    padding: 2px 6px;
+}
+
+filechooser .path-bar button:hover {
+    background-color: @bg_raised;
+    color: @fg;
+}
+
+filechooser .path-bar button.highlighted {
+    color: @accent;
+}
+
+/* ── Tooltip ── */
+tooltip,
+.tooltip {
+    background-color: @bg_raised;
+    color: @fg;
+    border: 1px solid @border;
+    border-radius: 4px;
+    padding: 4px 8px;
+    box-shadow: 0 2px 8px alpha(#000, 0.5);
+}
+
+/* ── Switch ── */
+switch {
+    background-color: @bg_raised;
+    border: 1px solid @border;
+    border-radius: 14px;
+    min-width: 40px;
+    min-height: 20px;
+}
+
+switch:checked {
+    background-color: @accent;
+    border-color: @accent;
+}
+
+switch slider {
+    background-color: @fg_dim;
+    border-radius: 50%;
+    min-width: 14px;
+    min-height: 14px;
+    margin: 2px;
+}
+
+switch:checked slider {
+    background-color: @sel_fg;
+}
+
+/* ── Frame / Card ── */
+frame,
+.frame {
+    border: 1px solid @border;
+    border-radius: 4px;
+}
+
+.card {
+    background-color: @bg_raised;
+    border: 1px solid @border;
+    border-radius: 6px;
+}
+
+/* ── InfoBar ── */
+infobar {
+    background-color: @bg_surface;
+    border-bottom: 1px solid @border;
+    padding: 6px;
+}
+
+infobar.info    { border-left: 3px solid @accent; }
+infobar.warning { border-left: 3px solid @yellow; }
+infobar.error   { border-left: 3px solid @red; }
