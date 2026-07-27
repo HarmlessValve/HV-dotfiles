@@ -5,8 +5,8 @@ This repository contains my personal dotfiles for a minimal **Arch Linux** setup
 ## Screenshots
 
 <p align="center">
-  <img src="assets/screenshot1.png" width="48%" />
-  <img src="assets/screenshot2.png" width="48%" />
+  <img src="assets/desktop-clean.png" width="48%" />
+  <img src="assets/desktop-apps.png" width="48%" />
 </p>
 
 ## Components Included
