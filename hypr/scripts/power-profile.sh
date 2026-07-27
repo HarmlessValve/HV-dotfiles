@@ -23,11 +23,11 @@ if [ "$1" = "--cycle" ]; then
     next_idx=$(( (current_idx + 1) % ${#PROFILES[@]} ))
     powerprofilesctl set "${PROFILES[$next_idx]}"
     current_idx=$next_idx
+    pkill -RTMIN+8 waybar
 fi
 
 # Output JSON for waybar
 icon="${ICONS[$current_idx]}"
 label="${LABELS[$current_idx]}"
 profile="${PROFILES[$current_idx]}"
-printf '{"text": "%s", "tooltip": "Power Profile: %s\nClick to cycle", "class": "%s"}
-' "$icon" "$label" "$profile"
+printf '{"text": "%s %s", "tooltip": "Power Profile: %s\\nClick to cycle", "class": "%s"}\n' "$icon" "$label" "$label" "$profile"

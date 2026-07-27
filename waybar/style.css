@@ -46,21 +46,24 @@
 #battery,
 #pulseaudio,
 #network,
-#bluetooth {
+#bluetooth,
+#clock,
+#mpris {
   min-width: 12px;
-  margin: 0 7.5px;
+  padding: 0 5px;
+  margin: 0;
+}
+
+#custom-power-profile {
+  min-width: 12px;
+  padding-left: 18px;
+  padding-right: 5px;
+  margin: 0;
 }
 
 #tray {
-  margin-right: 16px;
-}
-
-#bluetooth {
-  margin-right: 0px;
-}
-
-#network {
-  margin-right: 5px;
+  padding: 0 2px;
+  margin: 0;
 }
 
 tooltip {
@@ -69,9 +72,7 @@ tooltip {
   border: 1px solid @border_bg;
 }
 
-#clock {
-  margin-left: 5px;
-}
+/* Clock styling */
 
 .hidden {
   opacity: 0;
@@ -80,7 +81,6 @@ tooltip {
 /* Media player styling */
 #mpris {
   color: @muted;
-  margin-left: 5px;
 }
 
 /* Battery warning/critical states */
@@ -93,10 +93,6 @@ tooltip {
 }
 
 /* Power profile styling */
-#custom-power-profile {
-  min-width: 12px;
-  margin: 0 5px;
-}
 
 #custom-power-profile.power-saver {
   color: #8FECD5;

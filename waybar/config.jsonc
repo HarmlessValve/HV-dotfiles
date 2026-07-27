@@ -5,6 +5,8 @@
   "spacing": 4,
   "height": 28,
   "margin-top": 3,
+  "margin-left": 15,
+  "margin-right": 15,
   "modules-left": [
     "clock",
     "mpris"
@@ -16,9 +18,9 @@
     "bluetooth",
     "pulseaudio",
     "network",
-    "custom/power-profile",
     "battery",
-    "tray"
+    "tray",
+    "custom/power-profile"
   ],
   "hyprland/workspaces": {
     "on-click": "activate",
@@ -79,6 +81,7 @@
     "spacing": 1
   },
   "battery": {
+    "on-click": "/home/valve/.config/hypr/scripts/power-profile.sh --cycle",
     "format": "{icon}",
     "format-discharging": "{icon}",
     "format-charging": "{icon} ",
@@ -163,6 +166,7 @@
   "custom/power-profile": {
     "format": "{}",
     "exec": "/home/valve/.config/hypr/scripts/power-profile.sh",
+    "signal": 8,
     "on-click": "/home/valve/.config/hypr/scripts/power-profile.sh --cycle",
     "return-type": "json",
     "interval": 5,
