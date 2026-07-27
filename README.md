@@ -62,7 +62,7 @@ After the script completes, remember to:
    systemctl --user enable --now pipewire-pulse.service
    systemctl --user enable --now wireplumber.service
    ```
-2. Place your preferred wallpaper at `~/Pictures/backgrounds/omarchy-wp.png` (the directory is created automatically by the script).
+2. Place your preferred wallpaper at `~/Pictures/backgrounds/` (the directory is created automatically by the script).
 3. Install your specific GPU drivers (e.g., `nvidia nvidia-utils`, `xf86-video-amdgpu`, etc.).
 4. Restart your session or reboot.
 
