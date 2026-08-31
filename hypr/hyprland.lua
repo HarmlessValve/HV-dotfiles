@@ -24,3 +24,6 @@ require("layouts")
 require("keybinds")
 require("rules")
 require("autostart")
+
+-- HyprMod managed settings
+require("hyprland-gui")
