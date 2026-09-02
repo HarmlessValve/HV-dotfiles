@@ -5,7 +5,7 @@
 
 # Font
 font-family = JetBrainsMono Nerd Font
-font-size = 8
+font-size = 12
 
 # Window
 window-theme = ghostty

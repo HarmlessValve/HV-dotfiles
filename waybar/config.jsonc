@@ -63,17 +63,14 @@
     }
   },
   "network": {
+    "on-click": "ghostty -e impala",
     "format-icons": [
-      "f",
-      "f",
-      "2",
-      "5",
       ""
     ],
     "format": "{icon}",
     "format-wifi": "{icon}",
-    "format-ethernet": "2",
-    "format-disconnected": "e",
+    "format-ethernet": "\udb80\ude01",
+    "format-disconnected": "\udb85\udebc",
     "tooltip-format-wifi": "{essid} ({frequency} GHz)",
     "tooltip-format-ethernet": "Connected",
     "tooltip-format-disconnected": "Disconnected",
