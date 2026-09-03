@@ -119,8 +119,9 @@
     }
   },
   "bluetooth": {
+    "on-click": "ghostty -e bluetui",
     "format": "",
-    "format-disabled": "2",
+    "format-disabled": "\udb80\udcb2",
     "format-connected": "",
     "tooltip-format": "Devices connected: {num_connections}"
   },
